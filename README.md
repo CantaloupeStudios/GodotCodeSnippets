@@ -9,7 +9,9 @@ please consider subscribing to my mailing list by [clicking here](https://goo.gl
 
  * [Camera Screen Shake](https://github.com/CantaloupeStudios/GodotCodeSnippets/blob/master/ScreenShakeCamera.gd)
 
-# Social Media
+---
+
+## Social Media
  * [Twitter @CantaloupeStud1](https://twitter.com/CantaloupeStud1)
  * [Itch.io](https://cantaloupestudios.itch.io)
  * [Medium](https://medium.com/@cantaloupestudios)
