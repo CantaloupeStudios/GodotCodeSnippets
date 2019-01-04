@@ -1,0 +1,2 @@
+# GodotCodeSnippets
+Godot Code Snippets
