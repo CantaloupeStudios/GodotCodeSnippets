@@ -1,3 +1,5 @@
+# Add this script to a Camera2D
+
 extends Camera2D
 
 export(int) var screen_shake_duration_ms = 300 # Screenshake duration in miliseconds
@@ -17,5 +19,6 @@ func _process(delta):
 	else:
 		offset = starting_position
 
+# Call this function to start the screenshake
 func start_screen_shake():
 	last_screen_shake = OS.get_ticks_msec()
