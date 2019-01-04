@@ -12,7 +12,6 @@ func _ready():
 	starting_position = offset
 
 func _process(delta):
-	var new_position = Vector2()
 	if OS.get_ticks_msec() - last_screen_shake < screen_shake_duration_ms:
 		offset.x += rand_range(-screen_shake_intensity, screen_shake_intensity)
 		offset.y += rand_range(-screen_shake_intensity, screen_shake_intensity)
