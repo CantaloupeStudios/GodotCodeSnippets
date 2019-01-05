@@ -7,17 +7,25 @@ export(int) var screen_shake_intensity = 20 # Screenshake intensity
 
 var last_screen_shake = 0
 var starting_position = Vector2()
+var intensity = 0
+var odd_even = 0
 
 func _ready():
 	starting_position = offset
 
 func _process(delta):
-	if OS.get_ticks_msec() - last_screen_shake < screen_shake_duration_ms:
-		offset.x += rand_range(-screen_shake_intensity, screen_shake_intensity)
-		offset.y += rand_range(-screen_shake_intensity, screen_shake_intensity)
+	odd_even += 1
+	if OS.get_ticks_msec() - last_screen_shake < screen_shake_duration_ms && odd_even % 2 == 0:
+		offset.x += rand_range(-intensity, intensity)
+		offset.y += rand_range(-intensity, intensity)
 	else:
 		offset = starting_position
+		odd_even = 1
 
 # Call this function to start the screenshake
-func start_screen_shake():
+func start_screen_shake(_intensity):
 	last_screen_shake = OS.get_ticks_msec()
+	if _intensity:
+		intensity = _intensity
+	else:
+		intensity = screen_shake_intensity
